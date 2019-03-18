@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>lower to upper</title>
+</head>
+<body>
+<h1>Result</h1>
+    <p th:text="'Your words in upper case: ' + ${wordGenerator.words.toUpperCase()}" />
+    <a href="/words">Write some new words</a>
+</body>
+</html>

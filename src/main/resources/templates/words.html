@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Fun game</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>The fun starts here</h1>
+<h3>Convert your words to uppercase</h3>
+<form action="#" th:action="@{/words}" th:object="${words}" method="post">
+    <p>Type in words: <input type="text" th:field="*{words}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
