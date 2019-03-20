@@ -11,14 +11,9 @@ public class WordGenController {
 
 
     @GetMapping("/words")
-    public String words(Model model){
+    public String words(Model model) {
         model.addAttribute("words", new WordGenerator());
         return "words";
-    }
-
-    @PostMapping("/words")
-    public String wordSubmit(@ModelAttribute WordGenerator wordGenerator ){
-        return "result";
     }
 
 }
