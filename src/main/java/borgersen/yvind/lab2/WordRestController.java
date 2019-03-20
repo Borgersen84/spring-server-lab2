@@ -5,11 +5,15 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class WordRestController {
 
+    private final String response = "Your words to uppercase = ";
+
     @RequestMapping(value="/words", method = RequestMethod.POST, produces = "application/json")
     public String wordSubmit(WordGenerator wordGenerator ){
-        String s = "Your words to uppercase = "+ wordGenerator.getWords().toUpperCase();
+        String s = response + wordGenerator.getWords().toUpperCase();
         return s;
     }
+
+
 
 }
 
