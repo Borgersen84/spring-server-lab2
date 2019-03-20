@@ -12,7 +12,7 @@ public class WordGenController {
 
     @GetMapping("/words")
     public String words(Model model) {
-        model.addAttribute("words", new WordGenerator());
+        model.addAttribute("words", new WordGenerator(""));
         return "words";
     }
 

@@ -8,9 +8,9 @@ public class WordRestController {
     private final String response = "Your words to uppercase = ";
 
     @RequestMapping(value="/words", method = RequestMethod.POST, produces = "application/json")
-    public String wordSubmit(WordGenerator wordGenerator ){
+    public WordGenerator wordSubmit(WordGenerator wordGenerator ){
         String s = response + wordGenerator.getWords().toUpperCase();
-        return s;
+        return new WordGenerator(s);
     }
 
 

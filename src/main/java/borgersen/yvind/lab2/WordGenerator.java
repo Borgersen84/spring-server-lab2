@@ -4,6 +4,10 @@ public class WordGenerator {
 
     private String words;
 
+    public WordGenerator(String words) {
+        this.words = words;
+    }
+
     public String getWords() {
         return words;
     }
